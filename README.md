@@ -20,9 +20,15 @@ This file includes two different algorithm able to solve the **n puzzle**:
   
 - Breadth-first Search, with Limited Steps and Restarts:\
   To reduce the memory usage and to speed up the computations, a second algorithm is proposed.
-  - We build only one tree, starting from the suffled puzzle;
-  - We expand the tree using breadth-first strategy, but we limit the tree size, using MAX_DEPTH     parameter.
-  - If the solution is not reached in MAX_DEPTH steps, we evaluate the best configuartion among     the deepest node, using a specific function;
-  - We build a new tree, starting from the best configuration found;
-  - We repeat steps 3-4 until we find the solution (or until MAX_STEPS are reached, to stop the     algorithm eventually...)
-    - If , while expanding the tree, we cannot reach a new configuration (not already visited),        we restart from step 1
+  - Only one tree is built, starting from the suffled puzzle;
+  - The tree is expaned, using breadth-first strategy. The tree depth is limited, setting *MAX_DEPTH* parameter;
+  - If the solution is not reached in *MAX_DEPTH* steps, the best configuration, among all the deepest node, is evaluated using a specific *heuristic* function;
+  - A new tree is then built, starting from the best configuration found;
+  -Steps 3-4 are repeated, until the solution is found (or until MAX_STEPS are reached, to stop the algorithm, eventually);
+    - If , while expanding the tree, is not possible to reach a new configuration (not already visited), algorithm restarts from step 1.
+
+  **_pros_:** This algorithm is able to solve the puzzle in a relative short time, when the dimension is lower than 5.
+
+  **_cons_:** This is not a *complete* algorithm, so it is not guaranteed that it finds the solution all the times; for this reason random resets are implemented. When is not possible to find next node, it restart from initail configuration, even if this is not optimal for the computational time.\
+  Even if the tree depth is limited, the *tree size*, when puzzle dimension is greater than 4,
+  is still large, and so the algorithm is still resources demanding.
