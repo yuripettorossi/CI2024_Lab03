@@ -25,8 +25,8 @@ This file includes two different algorithm able to solve the **n puzzle**:
   - If the solution is not reached in *MAX_DEPTH* steps, the best configuration, among all the deepest node, is evaluated using a specific *heuristic* function;
   - A new tree is then built, starting from the best configuration found;
   -Steps 3-4 are repeated, until the solution is found (or until MAX_STEPS are reached, to stop the algorithm, eventually);
-    - If , while expanding the tree, is not possible to reach a new configuration (not already visited), algorithm restarts from step 1.\
-    - 
+    - If , while expanding the tree, is not possible to reach a new configuration (not already visited), algorithm restarts from step 1.
+    
   This algorithm does not find an optimal solution in term of steps performed (moves computed), but it is designed to try to be time efficent.
 
   **_pros_:** This algorithm is able to solve the puzzle in a relative short time, when the dimension is lower than 5.
