@@ -1,6 +1,6 @@
 # CI2024_Lab03
 Repository with code developed to solve the n-puzzle.\
-The main file is `nPuzzle.ipynb`. The `Lab03.ipynb` file is a secondary file where two alternative strategies were developed, but they have shoved to be not the optimal ones.
+The main file is `nPuzzle.ipynb`. The `Lab03_tests.ipynb` file is a secondary file where two alternative strategies were developed, but they have showed to be not the optimal ones; you can inspect it, but I suggest you to start with the main one.
 
 ## nPuzzle.ipynb
 This file includes two different algorithm able to solve the **n puzzle**:
@@ -35,3 +35,12 @@ This file includes two different algorithm able to solve the **n puzzle**:
   Even if the tree depth is limited, the *tree size*, when puzzle dimension is greater than 4,
   is still large, and so the algorithm is still resources demanding.
   The number of moves of the computed solution is way larger than the optimal one.
+
+## Lab03_tests.ipynb
+This file includes two alternative algorithms:
+- A* Search
+- Depth-first Search\
+
+They both showed to be able to solve the puzzle when the dimension is 3. Again, when the puzzle grows in size, they are slow in finding the solution.
+These two solution were uploaded in a separated file, just to show the work done, since the *Bi-directional search* compute a solution with lower moves and the *Bredth-first search* is faster when d>=4.
+  
