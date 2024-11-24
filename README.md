@@ -13,3 +13,7 @@ This file includes two different algorithm able to solve the **n puzzle**:
 
   When a common configuration is found in both tress, the solution path is computed 
   concatenating the two trees on the common node (the one evolving from the solution is reversed,    in order to have a proper path, from the initial configuration to the solution).
+
+  **_pros_:** This algorithm can found a solution made of minimal steps, since it computes all the  possible evolutions for all nodes, from both the initial configuration and the solution.
+
+   **_cons_:** Since this strategy is *complete* it requires a lot of memory and computational time. The algorithm proved to be suited to solve efficently puzzle with dimension of **2** or **3**, in a short time. When the dimension grows, the time required becomes very large. 
