@@ -43,4 +43,23 @@ This file includes two alternative algorithms:
 
 They both showed to be able to solve the puzzle when the dimension is 3. Again, when the puzzle grows in size, they are slow in finding the solution.
 These two solution were uploaded in a separated file, just to show the work done, since the *Bi-directional search* compute a solution with lower moves and the *Bredth-first search* is faster when d>=4.
-  
+## Edit
+After receiving suggestion from reviewer and looking for improvements, the heuristic function, used to estimate the goodness of a puzzle configuration, was improved. Now both the **Bi-Directional Search** and the **A-Star Search** are able to solve the puzzle in a reasonable time. The results achieved using Bi-Directional Search, Limited Depth Breadth-First Search and A* Search are reported in the following section. 
+
+## Results
+The table below shows the results achieved by different search algorithms. 
+For puzzle with dimension lower than 4, the results are computed as an average of different simulations.
+|Algorithm|Puzzle Dimension|Moves|Evaluated States|Execution Time|
+|----|----|----|----|----|
+|Bi-Directional Search   |d=2 |3 |4 |0.02 s |
+|Bi-Directional Search   |d=3 |23  |2395   |0.924 s |
+||
+|BF Search   |d=2  |4 |6   |0.005 s |
+|BF Search   |d=3  |43 |1037   |0.457 s |
+|BF Search   |d=4 |90 |19557 |50 s|
+|BF Search   |d=5  |357  |----   |---- s|
+||
+|A* Search|d=2  |3  |3  |0.001 s |
+|A* Search|d=3  |21  |190   |0.003 s |
+|A* Search|d=4  |80  |8854   |0.364 s |
+|A* Search|d=5  |154  |57604   |113 s |
